@@ -1,0 +1,39 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer template by Heedong Goh <heedong.goh@utexas.edu>
+% colors based on UT Brand Guide (http://www.utexas.edu/brand-guidelines)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{beamer}
+\usepackage{amsmath,amssymb,amsfonts,amscd}
+\usepackage{fancyhdr}\usepackage{graphicx}
+\usepackage{pgfpages} % Creates note pages
+\usefonttheme[onlymath]{serif}
+\usetheme{Madrid} % or Malmoe, Boadilla, Madrid
+\usecolortheme[RGB={191,87,0}]{structure} %Burnt Orange
+\definecolor{burntorange}{RGB}{191,87,0} %Burnt Orange
+\setbeamertemplate{items}[square] % or circle
+% Uncomment to create note pages
+%\setbeameroption{show notes}
+%\setbeameroption{show notes on second screen=right}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Titles and names %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title[Short Title]{Full title}
+%\subtitle{If I have one}
+\author{Heedong Goh}
+\institute[]{Mechanics, Uncertainty and Simulation in Engineering\\
+\textcolor{burntorange}{The University of Texas at Austin}}
+\date{\today}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Custom title page (comment to use default setting) %%%%%%%%%%%%%%%%
+\defbeamertemplate*{title page}{customized}[1][] {
+\begin{center} \hbox{}                         \end{center}  
+\begin{center}
+     \textcolor{burntorange}{\LARGE{\textbf{\inserttitle}}}
+\end{center}
+\begin{flushright} \insertsubtitle         \end{flushright}
+\hbox{}
+\begin{center} \large{\textbf{\insertauthor}}  \end{center}
+\begin{center} \footnotesize{\insertinstitute} \end{center}
+\begin{center} \footnotesize{\insertdate}      \end{center}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

@@ -1,0 +1,20 @@
+\input{beamerHeader.tex}
+\begin{document}
+
+\begin{frame} \titlepage \end{frame}
+
+
+\section{The Section}
+\begin{frame}
+  \frametitle{Functional derivative}
+  The functional derivative  $\frac{\partial F}{\partial\mathbf{x}}$ is implicitely defined by the equation
+  \begin{align*}
+dF\left[\mathbf{x},\tilde{\mathbf{x}}\right]=\int_{\Omega}\tilde{\mathbf{x}}\frac{\partial F}{\partial\mathbf{x}}d\Omega
+  \end{align*}
+  where the functional differential $dF\left[\mathbf{x},\tilde{\mathbf{x}}\right]$ is defined as
+  \begin{align*}
+    dF\left[\mathbf{x},\tilde{\mathbf{x}}\right]\equiv\left.\frac{d}{d\varepsilon}\right|_{\varepsilon=0}F\left[\mathbf{x}+\varepsilon\tilde{\mathbf{x}}\right]
+  \end{align*}
+\end{frame}
+
+\end{document}
