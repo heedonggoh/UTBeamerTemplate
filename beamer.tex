@@ -11,19 +11,57 @@
 \usecolortheme[RGB={191,87,0}]{structure} %Burnt Orange
 \definecolor{burntorange}{RGB}{191,87,0} %Burnt Orange
 \setbeamertemplate{items}[square] % or circle
+\beamertemplatenavigationsymbolsempty
+\usepackage{tabularx}
+\usepackage{subfigure}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{animate}
+\usepackage{xcolor}
+%\usepackage{biblatex}\bibliography{ref}
+\renewcommand*{\thesubfigure}{}
+\setbeamercolor*{enumerate item}{fg=black}
+\setbeamercolor*{enumerate subitem}{fg=black}
+\setbeamercolor*{enumerate subsubitem}{fg=black}
+\setbeamerfont{note page}{size=\tiny}
 % Uncomment to create note pages
 %\setbeameroption{show notes}
 %\setbeameroption{show notes on second screen=right}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% Titles and names %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\title[Short Title]{Full title}
+\title[Short Title]{\textbf{Full title}}
 %\subtitle{If I have one}
 \author{Heedong Goh}
 \institute[]{Mechanics, Uncertainty, and Simulation in Engineering\\
-\textcolor{burntorange}{The University of Texas at Austin}}
+\textcolor{burntorange}{\textbf{The University of Texas at Austin}}}
 \date{\today}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Footline (comment to use default setting) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+      \usebeamerfont{author in head/foot}
+      %\insertsection
+      \textbf{Heedong Goh}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}
+    \textbf{Name of the conference} location
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}
+   \insertshortdate{}\hspace*{2em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% Custom title page (comment to use default setting) %%%%%%%%%%%%%%%%
+\iffalse
 \defbeamertemplate*{title page}{customized}[1][] {
 \begin{center} \hbox{}                         \end{center}  
 \begin{center}
@@ -35,9 +73,18 @@
 \begin{center} \footnotesize{\insertinstitute} \end{center}
 \begin{center} \footnotesize{\insertdate}      \end{center}
 }
+\fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\begin{frame} \titlepage \end{frame}
+\begin{frame}
+  \bigskip
+  \bigskip
+  \bigskip
+  \bigskip
+  \titlepage
+  \vskip0pt plus 1filll
+  \includegraphics[width=0.7\linewidth]{./figures/muse.png}
+\end{frame}
 \input{./slides.tex}
 \end{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
