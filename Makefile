@@ -3,7 +3,7 @@
 # Downloaded from http://www.cs.berkeley.edu/~jaein/notes/latexhowto.html
 # Modified by Heedong Goh
 ######################################################################
-TITLE = titleofthetalk
+TITLE = example
 ODIR = .
 # DO NOT CHANGE ######################################################
 LATEX = pdflatex -jobname $(ODIR)/$(TITLE)
